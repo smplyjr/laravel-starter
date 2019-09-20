@@ -13,9 +13,9 @@ class CacheControl
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle( $request, Closure $next )
+    public function handle($request, Closure $next)
     {
-        $response = $next( $request );
+        $response = $next($request);
 
         $response->header('Cache-Control', 'no-cache, no-store, max-age=0, must-revalidate');
         $response->header('Pragma', 'no-cache');
